@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Print{% endblock %}
+{% block content %}
+
+<main class = "container">
+        <div class="starter-template text-center py-5 px-3">
+		<h1>{{ test['Recipe Name'] }}</h1>
+		<p class="lead">{{ test['Description'] }}</p><br><br>
+		<h1>Ingredients</h1>
+		<p class="lead" align = 'left'>{% for item in test['Ingredients']%}
+		<br>		
+				{{ item  }}
+
+		{% endfor %}
+		</p><br>
+		<h1>Cooking Instructions</h1>
+                <p class="lead" align='left'>{% for item in test['Instructions']%}
+				{{ item }}
+				<br><br>
+		{% endfor %}
+		</p><br><br>
+        </div>
+</main>
+
+
+{% endblock %}

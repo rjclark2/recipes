@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<main class = "container">
+	<div class="starter-template text-center py-5 px-3">
+		<h1>Goosej Recipes</h1>
+		<p class="lead">Database</p>
+	</div>
+</main>
+<body>
+	 Toggle column: <a class="toggle-vis" data-column="1">Description</a> -- <a class="toggle-vis" data-column="2">Ingredients</a> -- <a class="toggle-vis" data-column="4">Instructions</a>
+<button id="button">Print Selected Recipe</button>
+<table id="mydata" class='row-border' style='width:90%'>
+    <thead>
+      <tr>
+	<th>Recipe Name</th>
+	<th>Description</th>
+        <th>Ingredients</th>
+        <th>Original Recipe Website</th>
+        <th>Instructions</th>
+        <th>Number of Ratings</th>
+        <th>Recommended</th>
+      </tr>
+    </thead>
+  </table>
+</body>
+{% endblock %}

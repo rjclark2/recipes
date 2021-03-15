@@ -1,0 +1,11 @@
+gunicorn == 20.0.4
+requests == 2.24.0
+Flask == 1.1.2
+Flask-SQLAlchemy 
+Flask-WTF == 0.14.3
+urllib3 == 1.25.10
+pandas
+bokeh
+dill
+jinja2
+simplejson
