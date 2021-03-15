@@ -55,13 +55,8 @@ def to_timedelta(x):
             return None
 df['Publish Date'] = df['Publish Date'].apply(lambda x: min(x))
 df['Publish Date'] = df['Publish Date'].apply(to_datetime)
-#df['Original Recipe Website'] = df['Original Recipe Website'].apply(lambda x: 'The Food Network')
 df = df[df['Publish Date'].isnull() == False]
 df['Publish Date'] = df['Publish Date'].astype('int')
-#df['Total Time'] = df['Total Time'].str.replace('hrs','hours').str.replace('hr','hour').str.replace('mins','minutes').str.replace('min','minutes')
-#df['Total Time'] = df[~df['Total Time'].str.contains('week')]['Total Time']
-#df['Total Time'] = df['Total Time'].apply(pd.to_timedelta)
-#df = df[df['Total Time'].isnull() == False]
 df['Description'] = df['Description'].fillna('')
 df.to_json('static/fnall.json',orient='records')
 
@@ -117,13 +112,8 @@ def to_timedelta(x):
             return None
 df['Publish Date'] = df['Publish Date'].apply(lambda x: min(x))
 df['Publish Date'] = df['Publish Date'].apply(to_datetime)
-#df['Original Recipe Website'] = df['Original Recipe Website'].apply(lambda x: 'allrecipes')
 df = df[df['Publish Date'].isnull() == False]
 df['Publish Date'] = df['Publish Date'].astype('int')
-#df['Total Time'] = df['Total Time'].str.replace('hrs','hours').str.replace('hr','hour').str.replace('mins','minutes').str.replace('min','minutes').str.replace('minutesutes','')
-#df['Total Time'] = df[~df['Total Time'].str.contains('week')]['Total Time']
-#df['Total Time'] = df['Total Time'].apply(to_timedelta)
-#df = df[df['Total Time'].isnull() == False]
 df['Description'] = df['Description'].fillna('')
 df.to_json('static/arall.json',orient='records')
 
@@ -181,12 +171,6 @@ def to_timedelta(x):
 df['Publish Date'] = df['Publish Date'].apply(to_datetime)
 df = df[df['Publish Date'].isnull() == False]
 df['Publish Date'] = df['Publish Date'].astype('int')
-#df['Total Time'] = df['Total Time'].str.replace('hrs','hours').str.replace('hr','hour').str.replace('mins','minutes').str.replace('min','minutes').str.replace('minutesutes','')
-#df['Total Time'] = df[~df['Total Time'].str.contains('week')]['Total Time']
-#df['Total Time'] = df['Total Time'].apply(to_timedelta)
-#df['Total Time'] = df['Total Time'].apply(lambda x: 0)
-#df = df[df['Total Time'].isnull() == False]
-#df['Original Recipe Website'] = df['Original Recipe Website'].apply(lambda x: 'Epicurious')
 df['Description'] = df['Description'].fillna('')
 df.to_json('static/epiall.json',orient='records')
 

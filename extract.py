@@ -347,3 +347,7 @@ def gen_jsons(name):
             df.to_json('json/'+name+str(chunkn))
             print(chunkn,' written')
             chunkn += 100
+
+if __name__ == "__main__":
+    ### Warning Running this will take a long time ###
+    gen_jsons('all')

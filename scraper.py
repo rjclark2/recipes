@@ -52,15 +52,6 @@ def download_htmls(name):
         for i in chunked:
             gethtmls(name,i)
 
-#def download_htmls(name):
-#    if name == 'all':
-#        for i in urldict:
-#            download_htmls(i)
-#    else:
-#        with open(name+'_urls','r') as r:
-#            numbers = r.readlines()
-#            numbers = [x.replace('\n','') for x in numbers]
-#            gethtml(name,numbers)
 
 @checkpoint(key= lambda args, kwargs: ''.join([args[1], (args[0].url).replace(args[2],''), '.p']).replace('/',''),work_dir='cache')
 def get_techs(response,name,parent):
@@ -264,4 +255,6 @@ def poy_geturl():
             w.write(str(i) + '\n')
     print('Got POY URLS')
 
-
+if __name__ == "__main__":
+    get_urls()
+    download_htmls('all')
