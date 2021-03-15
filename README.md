@@ -13,7 +13,7 @@ files using flask to generate the heroku website.
 
 scraper.py
 
-This file goes throughn the supported recipe websites, builds a list of urls to extract recipe data from. Then caches html files for data extraction.
+This file goes through the supported recipe websites, builds a list of urls to extract recipe data from. Then caches html files for data extraction.
 
 extract.py
 
